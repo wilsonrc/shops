@@ -21,3 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "shops"
 include(":app")
+include(":core-data")
+include(":core-domain")
+include(":core-ui")
+include(":core-network")
+include(":core-database")
+include(":feature-shops-list")
+include(":feature-shop-detail")
