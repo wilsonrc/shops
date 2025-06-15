@@ -7,7 +7,7 @@ import com.example.domain.model.Shop
 internal object ShopMapper {
 
     fun dtoToEntity(dto: ShopDto): ShopEntity = ShopEntity(
-        id = dto.name.hashCode().toString(),
+        id = dto.id,
         name = dto.name,
         description = dto.description,
         picture = dto.picture,

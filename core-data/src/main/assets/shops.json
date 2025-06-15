@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "信州スシサカバ 寿しなの",
     "description": "Sushi bar with a variety of sake options.",
     "picture": "http://ts1.mm.bing.net/th?id=OIP.GURnZicaENMLYBMZN9k1LwHaFS&pid=15.1",
@@ -10,6 +11,7 @@
     "website": "https://www.sushinano.com/"
   },
   {
+    "id": "2",
     "name": "長野県酒類販売(株)",
     "description": "Wholesale sake distributor.",
     "picture": "https://www.nagano-sake.com/common/images/front/drinks-xxl@2x.jpg",
@@ -20,6 +22,7 @@
     "website": "http://www.nagano-sake.com/"
   },
   {
+    "id": "3",
     "name": "Kadode",
     "description": "Japanese restaurant with high-quality sake.",
     "picture": "https://rimage.hitosara.com/gg/image/0004030762/0004030762I1_1024x767y.webp",
@@ -30,6 +33,7 @@
     "website": "https://hitosara.com/0004030762/"
   },
   {
+    "id": "4",
     "name": "Midori Nagano",
     "description": "Shopping center with a variety of sake shops.",
     "picture": null,
@@ -40,6 +44,7 @@
     "website": "https://www.eki-midori.com/nagano/"
   },
   {
+    "id": "5",
     "name": "Endo Brewery",
     "description": "Historic brewery known for its Keiryu brand sake.",
     "picture": "https://www.keiryu.jp/img_201904/head_parts/shop_img.png",
@@ -50,6 +55,7 @@
     "website": "https://www.keiryu.jp/"
   },
   {
+    "id": "6",
     "name": "Masuichi Brewery",
     "description": "Brewery located in Obuse, known for its traditional sake.",
     "picture": "https://gigaplus.makeshop.jp/masuichi/assets_v2/img/common/slide1.jpg",
@@ -60,6 +66,7 @@
     "website": "https://www.masuichi.com/"
   },
   {
+    "id": "7",
     "name": "Miyasaka Brewery",
     "description": "Brewery in Suwa City, offering a variety of sake.",
     "picture": "https://www.masumi.co.jp/en/wp/wp-content/uploads/2025/02/top_1.jpg",
@@ -70,6 +77,7 @@
     "website": "http://www.masumi.co.jp/"
   },
   {
+    "id": "8",
     "name": "Tamamura Honten",
     "description": "Brewery in Yamanouchi, known for its sake and beer.",
     "picture": "https://img07.shop-pro.jp/PA01336/957/slideshow/slideshow_img1.jpg?cmsp_timestamp=20160118182621",
@@ -80,6 +88,7 @@
     "website": "http://www.tamamura-honten.co.jp/"
   },
   {
+    "id": "9",
     "name": "Shinshu Kuraudo",
     "description": "Specialty shop offering sake from around Nagano.",
     "picture": "https://www.nagano-wine.jp/store/.assets/_DSC6668.jpg",
@@ -90,6 +99,7 @@
     "website": "https://www.nagano-wine.jp/store/pickup/post-34/"
   },
   {
+    "id": "10",
     "name": "Hokuan Brewery",
     "description": "Small brewery in Omachi City, known for its Daikokumasamune sake.",
     "picture": "https://hokuan.co.jp/wp/wp-content/themes/hokuan/img/bg01.jpg",

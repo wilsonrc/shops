@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.InputStreamReader
 
-internal class AssetJsonReader(private val context: Context) {
+class AssetJsonReader(private val context: Context) {
 
     suspend fun read(filename: String): String = withContext(Dispatchers.IO) {
         context.assets.open(filename).use { stream ->

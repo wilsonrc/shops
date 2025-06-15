@@ -5,6 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ShopDto(
+    val id: String,
     val name: String,
     val description: String,
     val picture: String? = null,
