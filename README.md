@@ -38,10 +38,6 @@ Discover breweries, bottle shops and tasting bars across Nagano Prefecture.
 │ (local db + asset source)│ mandatory suspend/Flow contract   |
 └──────────────────────────────────────────────────────────────┘
 
-pgsql
-Copiar
-Editar
-
 * **Unidirectional data‑flow**—`ObserveShopsUseCase → StateFlow → Compose`.
 * **Offline‑first**—all content is cached in Room; today it is seeded from _assets/shops.json_ but the API boundary is already there.
 * **Dependency Injection**—one Hilt module (`DataModule`) wires everything; each feature only depends on the public surface of lower layers.
@@ -102,7 +98,3 @@ Internationalisation – string resources & RTL layouts; Japanese/English at min
 Analytics & crash reporting – Firebase or open‑source alternatives (while respecting user privacy).
 
 KMP sharing – migrate core‑domain and core‑data to jvm() + ios() targets to reuse logic in an iOS client.
-
-typescript
-Copiar
-Editar
