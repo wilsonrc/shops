@@ -33,11 +33,11 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.android.core)        // e.g. `core-ktx`
+    implementation("androidx.compose.material3:material3")   // version comes from BOM
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.mockk)
 }

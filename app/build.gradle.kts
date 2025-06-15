@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -40,20 +42,25 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.compose.bom))        // androidx.compose:compose-bom:2025.06.00 :contentReference[oaicite:0]{index=0}
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    // Core UI
+    implementation(libs.compose.ui)                   // androidx.compose.ui:ui
+    implementation(libs.compose.material3)           // androidx.compose.material3:material3
+    implementation(libs.compose.ui.tooling.preview)  // design-time previews
+
+    // Activity ↔️ Compose bridge (gives you ComponentActivity.setContent)
+    implementation(libs.activity.compose)             // androidx.activity:activity-compose:1.9.0 :contentReference[oaicite:1]{index=1}
+
+    // Optional but handy while coding
+    debugImplementation(libs.compose.ui.tooling)      // layout inspector, etc.
+
+    implementation(project(":feature-shops-list"))
+    implementation(project(":feature-shop-detail"))
+    implementation(project(":core-data"))
+    implementation(libs.hilt.android.lib)
+    ksp(libs.hilt.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 }
