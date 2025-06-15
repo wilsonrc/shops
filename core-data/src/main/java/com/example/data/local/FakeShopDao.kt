@@ -1,6 +1,5 @@
-package com.example.data
+package com.example.data.local
 
-import com.example.data.local.ShopDao
 import com.example.data.model.entity.ShopEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

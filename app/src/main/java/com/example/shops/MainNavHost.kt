@@ -10,7 +10,7 @@ import com.example.feature_shop_detail.navigation.DetailRoute
 import com.example.feature_shop_detail.ShopDetailScreen
 
 @Composable
-fun MainNav() {
+fun MainNavHost() {
     val nav = rememberNavController()
     NavHost(nav, startDestination = ListRoute.route) {
         composable(ListRoute.route) { ShopsListScreen(nav) }

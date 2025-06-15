@@ -13,6 +13,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
 
 @Module
@@ -23,6 +25,12 @@ abstract class DataModule {
     abstract fun bindRepo(impl: ShopsRepositoryImpl): ShopsRepository
 
     companion object {
+
+        /** Shared IO dispatcher used across the data layer. */
+        @Provides
+        @Singleton
+        fun ioDispatcher(): CoroutineDispatcher = Dispatchers.IO
+
         @Provides
         @Singleton
         fun db(@ApplicationContext ctx: Context): ShopDatabase =
@@ -34,7 +42,9 @@ abstract class DataModule {
         fun dao(db: ShopDatabase): ShopDao = db.shopDao()
 
         @Provides
-        fun jsonReader(@ApplicationContext ctx: Context): AssetJsonReader =
-            AssetJsonReader(ctx)
+        fun jsonReader(
+            @ApplicationContext ctx: Context,
+            dispatcher: CoroutineDispatcher
+        ): AssetJsonReader = AssetJsonReader(ctx, dispatcher)
     }
 }
