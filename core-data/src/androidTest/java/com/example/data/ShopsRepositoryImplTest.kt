@@ -1,7 +1,7 @@
 package com.example.data
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.runner.AndroidJUnit4
 import com.example.data.local.FakeShopDao
 import com.example.data.remote.AssetJsonReader
 import com.example.data.remote.AssetShopsDataSource

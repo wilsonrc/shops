@@ -39,7 +39,7 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)
     implementation(libs.compose.ui.tooling.preview)
-    implementation("androidx.navigation:navigation-compose:2.8.0")
+    implementation(libs.navigation.compose)
     implementation(libs.hilt.android.lib)
     implementation(libs.hilt.navigation)
     implementation(libs.activity.compose)
