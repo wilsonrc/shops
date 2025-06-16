@@ -8,6 +8,7 @@ import com.example.feature_shop_detail.navigation.DetailRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -18,7 +19,7 @@ class ShopDetailViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _state = MutableStateFlow<ShopDetailUiState>(ShopDetailUiState.Loading)
-    val state: StateFlow<ShopDetailUiState> = _state
+    val state: StateFlow<ShopDetailUiState> = _state.asStateFlow()
 
     init {
         val id: String? = savedStateHandle[DetailRoute.ARG_ID]
