@@ -18,11 +18,16 @@ class ShopsListViewModel @Inject constructor(
     val state: StateFlow<ShopsListUiState> =
         observeShops()
             .map<_, ShopsListUiState> { ShopsListUiState.Ready(it) }
-            .onStart { emit(ShopsListUiState.Loading) }
+            .onStart {
+                emit(ShopsListUiState.Loading)
+                refresh()
+            }
             .catch { emit(ShopsListUiState.Error(it.message ?: "error")) }
-            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ShopsListUiState.Loading)
-
-    init { refresh() }
+            .stateIn(
+                viewModelScope,
+                SharingStarted.WhileSubscribed(5_000),
+                ShopsListUiState.Loading
+            )
 
     fun refresh() = viewModelScope.launch { refreshShops() }
 }
